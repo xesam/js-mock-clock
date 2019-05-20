@@ -4,6 +4,9 @@ const TYPE = {
 };
 
 class BaseClock {
+    getElapsed() {
+    }
+
     setTimeout(listener, mills) {
     }
 
