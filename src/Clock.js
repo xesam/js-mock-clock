@@ -1,10 +1,8 @@
-const TYPE = {
-    TIMEOUT: 0,
-    INTERVAL: 1
-};
+const {TYPE, BaseClock} = require('./BaseClock');
 
-class Clock {
+class Clock extends BaseClock {
     constructor() {
+        super();
         this.elapsed = 0;
         this.timeline = [];
         this.id = 1;
@@ -106,9 +104,4 @@ class Clock {
     }
 }
 
-let _exports;
-if (typeof module === "object" && exports) {
-    _exports = module.exports;
-}
-
-_exports.Clock = Clock;
+exports.Clock = Clock;
