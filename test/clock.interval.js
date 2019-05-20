@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {Clock} = require('../src/clock');
+const {Clock} = require('../src');
 
 let clock = new Clock();
 let count = 0;

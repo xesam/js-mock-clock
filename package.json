@@ -1,0 +1,25 @@
+{
+  "name": "js-mock-clock",
+  "version": "0.0.1",
+  "description": "mock setTimeout/setInterval",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xesam/js-mock-clock.git"
+  },
+  "keywords": [
+    "setTimeout"
+  ],
+  "author": "xesam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xesam/js-mock-clock/issues"
+  },
+  "homepage": "https://github.com/xesam/js-mock-clock#readme"
+}
