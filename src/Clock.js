@@ -24,19 +24,20 @@ class Clock extends BaseClock {
         });
     }
 
-    inject() {
-        setTimeout = (...args) => {
+    bind(host) {
+        host.setTimeout = (...args) => {
             return this.setTimeout(...args);
         };
-        clearTimeout = (...args) => {
+        host.clearTimeout = (...args) => {
             return this.clearTimeout(...args);
         };
-        setInterval = (...args) => {
+        host.setInterval = (...args) => {
             return this.setInterval(...args);
         };
-        clearInterval = (...args) => {
+        host.clearInterval = (...args) => {
             return this.clearInterval(...args);
         };
+        return this;
     }
 
     addHandler(handler) {
@@ -46,7 +47,7 @@ class Clock extends BaseClock {
         });
     }
 
-    clearHandler(id) {
+    removeHandler(id) {
         this.timeline = this.timeline.filter(ele => {
             return ele.id !== id;
         });
@@ -61,7 +62,10 @@ class Clock extends BaseClock {
         this._trigger();
     }
 
-    tick(mills = 1) {
+    tick(mills) {
+        if (mills < 1) {
+            return;
+        }
         this.elapsed += mills;
         this._trigger();
     }
@@ -80,7 +84,7 @@ class Clock extends BaseClock {
     }
 
     clearTimeout(id) {
-        this.clearHandler(id);
+        this.removeHandler(id);
     }
 
     setInterval(listener, interval) {
@@ -100,7 +104,7 @@ class Clock extends BaseClock {
     }
 
     clearInterval(id) {
-        this.clearHandler(id);
+        this.removeHandler(id);
     }
 }
 
