@@ -18,7 +18,7 @@ setTimeout(() => {
 }, 150);
 
 clock.setElapsed(90);
-assert.strictEqual(count, 10);
+assert.strictEqual(count, 0);
 
 clock.setElapsed(100);
 assert.strictEqual(count, 100);
