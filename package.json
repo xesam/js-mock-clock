@@ -1,6 +1,6 @@
 {
   "name": "js-mock-clock",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "mock setTimeout/setInterval",
   "main": "index.js",
   "directories": {

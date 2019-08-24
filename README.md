@@ -20,8 +20,8 @@ setTimeout(() => {
 clock.setElapsed(90);
 assert.strictEqual(count, 0);
 
-clock.setElapsed(100);
-assert.strictEqual(count, 100);
+clock.setElapsed(150);
+assert.strictEqual(count, 150);
 
 ```
 
@@ -39,6 +39,7 @@ clock.setTimeout(() => {
 
 clock.setElapsed(1);
 assert.strictEqual(count, 0);
+
 clock.setElapsed(9);
 assert.strictEqual(count, 9);
 
