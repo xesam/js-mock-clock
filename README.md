@@ -4,7 +4,7 @@ Test app depends on setTimeout/clearTimeout
 
 # usage
 
-## type 1：replace host[window | global] setTimeout/clearTimeout
+## type 1： use clock object
 
 ```javascript
 
@@ -50,7 +50,7 @@ assert.deepEqual(counts, [10, 100, 100]);
 
 ```
 
-## type 2：use clock object
+## type 2：replace host[window | global] setTimeout/clearTimeout
 
 ```javascript
 const {Clock} = require('js-mock-clock');
